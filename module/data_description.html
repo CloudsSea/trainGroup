@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+</head>
+<body>
+              MSSubClass: Identifies the type of dwelling involved in the sale.	&nbsp;&nbsp;&nbsp;&nbsp;   MSSubClass：标识出售中涉及的住宅类型。</br>
+                      20	1-STORY 1946 & NEWER ALL STYLES&nbsp;&nbsp;&nbsp;&nbsp;   20 1故事1946及更高版本的所有样式</br>
+                      30	1-STORY 1945 & OLDER&nbsp;&nbsp;&nbsp;&nbsp;   30 1故事1945及更高版本的</br>
+                      40	1-STORY W/FINISHED ATTIC ALL AGES&nbsp;&nbsp;&nbsp;&nbsp;   40带有顶楼阁楼的所有年龄层</br>
+                      45	1-1/2 STORY - UNFINISHED ALL AGES&nbsp;&nbsp;&nbsp;&nbsp;   45 1-1 / 2故事-未完成的所有年龄</br>
+                      50	1-1/2 STORY FINISHED ALL AGES&nbsp;&nbsp;&nbsp;&nbsp;   50 1-1 / 2故事已完成的所有年龄</br>
+                      60	2-STORY 1946 & NEWER&nbsp;&nbsp;&nbsp;&nbsp;   60 2-故事1946及更高版本</br>
+                      70	2-STORY 1945 & OLDER&nbsp;&nbsp;&nbsp;&nbsp;   2故事1945及更高版本</br>
+                      75	2-1/2 STORY ALL AGES&nbsp;&nbsp;&nbsp;&nbsp;   75 2-1 / 2故事所有年龄段</br>
+                      80	SPLIT OR MULTI-LEVEL&nbsp;&nbsp;&nbsp;&nbsp;   80</br>
+                      85	SPLIT FOYER&nbsp;&nbsp;&nbsp;&nbsp;   拆分或多层次85分裂客户</br>
+                      90	DUPLEX - ALL STYLES AND AGES&nbsp;&nbsp;&nbsp;&nbsp;   90 双工-所有样式和年龄</br>
+                     120	1-STORY PUD (Planned Unit Development) - 1946 & NEWER&nbsp;&nbsp;&nbsp;&nbsp;   120 1故事推送（计划中的单元开发）-1946及更高版本</br>
+                     150	1-1/2 STORY PUD - ALL AGES&nbsp;&nbsp;&nbsp;&nbsp;   150 1-1 / 2故事布丁-所有年龄</br>
+                     160	2-STORY PUD - 1946 & NEWER&nbsp;&nbsp;&nbsp;&nbsp;   160 2层</br>
+                     180	PUD - MULTILEVEL - INCL SPLIT LEV/FOYER&nbsp;&nbsp;&nbsp;&nbsp;   PUD-1946年及以后的180 PUD-多层-INCL拼大写水平/期货</br>
+                     190	2 FAMILY CONVERSION - ALL STYLES AND AGES&nbsp;&nbsp;&nbsp;&nbsp;   190 2家庭转换-所有样式和</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MSZoning: Identifies the general zoning classification of the sale.&nbsp;&nbsp;&nbsp;&nbsp;   年龄MSZoning：标识销售的一般分区分类。</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     A	Agriculture&nbsp;&nbsp;&nbsp;&nbsp;   A农业</br>
+                     C	Commercial&nbsp;&nbsp;&nbsp;&nbsp;   C商业</br>
+                     FV	Floating Village Residential&nbsp;&nbsp;&nbsp;&nbsp;   FV浮动村庄住宅</br>
+                     I	Industrial&nbsp;&nbsp;&nbsp;&nbsp;   I工业</br>
+                     RH	Residential High Density&nbsp;&nbsp;&nbsp;&nbsp;   RH住宅高密度</br>
+                     RL	Residential Low Density&nbsp;&nbsp;&nbsp;&nbsp;   RL住宅低密度</br>
+                     RP	Residential Low Density Park &nbsp;&nbsp;&nbsp;&nbsp;   RP住宅低密度公园</br>
+                     RM	Residential Medium Density&nbsp;&nbsp;&nbsp;&nbsp;   RM住宅中密度</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LotFrontage: Linear feet of street connected to property&nbsp;&nbsp;&nbsp;&nbsp;   地段正面：与物业相连的街道的线性英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LotArea: Lot size in square feet&nbsp;&nbsp;&nbsp;&nbsp;   LotArea：地块的面积以平方英尺为单位</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Street: Type of road access to property&nbsp;&nbsp;&nbsp;&nbsp;   街道：通往物业的道路类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Grvl	Gravel	&nbsp;&nbsp;&nbsp;&nbsp;   Grvl Gravel</br>
+                     Pave	Paved&nbsp;&nbsp;&nbsp;&nbsp;   Pave Paved</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Alley: Type of alley access to property&nbsp;&nbsp;&nbsp;&nbsp;   Alley：小巷通往物业的类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Grvl	Gravel&nbsp;&nbsp;&nbsp;&nbsp;   Grvl Gravel</br>
+                     Pave	Paved&nbsp;&nbsp;&nbsp;&nbsp;   Pave Paved</br>
+                     NA 	No alley access&nbsp;&nbsp;&nbsp;&nbsp;   NA不带胡同</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LotShape: General shape of property&nbsp;&nbsp;&nbsp;&nbsp;   形状：房屋的一般形状</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Reg	Regular	&nbsp;&nbsp;&nbsp;&nbsp;   Reg Regular</br>
+                     IR1	Slightly irregular&nbsp;&nbsp;&nbsp;&nbsp;   IR1轻微不规则</br>
+                     IR2	Moderately Irregular&nbsp;&nbsp;&nbsp;&nbsp;   IR2中度不规则</br>
+                     IR3	Irregular&nbsp;&nbsp;&nbsp;&nbsp;   IR3不规则</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LandContour: Flatness of the property&nbsp;&nbsp;&nbsp;&nbsp;   土地轮廓：房屋平整度</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Lvl	Near Flat/Level	&nbsp;&nbsp;&nbsp;&nbsp;   Lvl近平面/水平</br>
+                     Bnk	Banked - Quick and significant rise from street grade to building&nbsp;&nbsp;&nbsp;&nbsp;   Bnk Banked-从街道坡度到建筑物</br>
+                     HLS	Hillside - Significant slope from side to side&nbsp;&nbsp;&nbsp;&nbsp;   HLS山坡的快速且显着的上升-从一侧到另一侧的显着坡度</br>
+                     Low	Depression&nbsp;&nbsp;&nbsp;&nbsp;   低 压力</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Utilities: Type of utilities available&nbsp;&nbsp;&nbsp;&nbsp;   公用事业：可用公用事业的类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     AllPub	All public Utilities (E,G,W,& S)	&nbsp;&nbsp;&nbsp;&nbsp;   AllPub所有公用事业（E，G，W和S）</br>
+                     NoSewr	Electricity, Gas, and Water (Septic Tank)&nbsp;&nbsp;&nbsp;&nbsp;   NoSewr电力，天然气和水（化粪池）</br>
+                     NoSeWa	Electricity and Gas Only&nbsp;&nbsp;&nbsp;&nbsp;   NoSeWa仅电力和天然气</br>
+                     ELO	Electricity only	&nbsp;&nbsp;&nbsp;&nbsp;   ELO 仅电力</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LotConfig: Lot configuration&nbsp;&nbsp;&nbsp;&nbsp;   LotConfig：</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Inside	Inside lot&nbsp;&nbsp;&nbsp;&nbsp;   内部地段内部地段配置</br>
+                     Corner	Corner lot&nbsp;&nbsp;&nbsp;&nbsp;   角地块</br>
+                     CulDSac	Cul-de-sac&nbsp;&nbsp;&nbsp;&nbsp;   CulDSac Cul-de-sac</br>
+                     FR2	Frontage on 2 sides of property&nbsp;&nbsp;&nbsp;&nbsp;   FR2在属性2侧的</br>
+                     FR3	Frontage on 3 sides of property&nbsp;&nbsp;&nbsp;&nbsp;   正面FR3在属性3侧的正面土地</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LandSlope: Slope of property&nbsp;&nbsp;&nbsp;&nbsp;   坡度：属性的</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Gtl	Gentle slope&nbsp;&nbsp;&nbsp;&nbsp;   坡度Gtl 温和坡度</br>
+                     Mod	Moderate Slope	&nbsp;&nbsp;&nbsp;&nbsp;   Mod中等坡度</br>
+                     Sev	Severe Slope&nbsp;&nbsp;&nbsp;&nbsp;   严重严重坡度</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Neighborhood: Physical locations within Ames city limits&nbsp;&nbsp;&nbsp;&nbsp;   周边环境：埃姆斯城市中的物理位置限制</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Blmngtn	Bloomington Heights&nbsp;&nbsp;&nbsp;&nbsp;   Blmngtn布卢明顿高地</br>
+                     Blueste	Bluestem&nbsp;&nbsp;&nbsp;&nbsp;   Blueste须芒草</br>
+                     BrDale	Briardale&nbsp;&nbsp;&nbsp;&nbsp;   BrDale Briardale</br>
+                     BrkSide	Brookside&nbsp;&nbsp;&nbsp;&nbsp;   BrkSide溪涧</br>
+                     ClearCr	Clear Creek&nbsp;&nbsp;&nbsp;&nbsp;   ClearCr清除河</br>
+                     CollgCr	College Creek&nbsp;&nbsp;&nbsp;&nbsp;   CollgCr学院溪</br>
+                     Crawfor	Crawford&nbsp;&nbsp;&nbsp;&nbsp;   Crawfor克劳福德</br>
+                     Edwards	Edwards&nbsp;&nbsp;&nbsp;&nbsp;   爱德华·爱德华兹</br>
+                     Gilbert	Gilbert&nbsp;&nbsp;&nbsp;&nbsp;   ·吉尔伯特吉尔伯特</br>
+                     IDOTRR	Iowa DOT and Rail Road&nbsp;&nbsp;&nbsp;&nbsp;   IDOTRR爱荷华州运输部和铁路路</br>
+                     MeadowV	Meadow Village&nbsp;&nbsp;&nbsp;&nbsp;   MeadowV草甸村</br>
+                     Mitchel	Mitchell&nbsp;&nbsp;&nbsp;&nbsp;   米切尔米切尔</br>
+                     Names	North Ames&nbsp;&nbsp;&nbsp;&nbsp;   名北埃姆斯</br>
+                     NoRidge	Northridge&nbsp;&nbsp;&nbsp;&nbsp;   NoRidge北岭</br>
+                     NPkVill	Northpark Villa&nbsp;&nbsp;&nbsp;&nbsp;   NPkVill北园别墅</br>
+                     NridgHt	Northridge Heights&nbsp;&nbsp;&nbsp;&nbsp;   NridgHt北岭高地</br>
+                     NWAmes	Northwest Ames&nbsp;&nbsp;&nbsp;&nbsp;   NWAmes西北艾姆斯</br>
+                     OldTown	Old Town&nbsp;&nbsp;&nbsp;&nbsp;   旧城区旧城区</br>
+                     SWISU	South & West of Iowa State University&nbsp;&nbsp;&nbsp;&nbsp;   SWISU爱荷华州立大学 西南部</br>
+                     Sawyer	Sawyer&nbsp;&nbsp;&nbsp;&nbsp;   Sawyer Sawyer</br>
+                     SawyerW	Sawyer West&nbsp;&nbsp;&nbsp;&nbsp;   SawyerW Sawyer West</br>
+                     Somerst	Somerset&nbsp;&nbsp;&nbsp;&nbsp;   Somerst Somerset</br>
+                     StoneBr	Stone Brook&nbsp;&nbsp;&nbsp;&nbsp;   StoneBr Stone Brook</br>
+                     Timber	Timberland&nbsp;&nbsp;&nbsp;&nbsp;   Timber Timberland</br>
+                     Veenker	Veenker&nbsp;&nbsp;&nbsp;&nbsp;   Veenker Veenker</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Condition1: Proximity to various conditions&nbsp;&nbsp;&nbsp;&nbsp;   条件1：接近各种条件的</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Artery	Adjacent to arterial street&nbsp;&nbsp;&nbsp;&nbsp;   动脉靠近动脉街道的</br>
+                     Feedr	Adjacent to feeder street	&nbsp;&nbsp;&nbsp;&nbsp;   支线靠近支线的街道</br>
+                     Norm	Normal	&nbsp;&nbsp;&nbsp;&nbsp;   正常</br>
+                     RRNn	Within 200' of North-South Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RRNn在200'以内南北铁路</br>
+                     RRAn	Adjacent to North-South Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RRAn的毗邻南北铁路</br>
+                     PosN	Near positive off-site feature--park, greenbelt, etc.&nbsp;&nbsp;&nbsp;&nbsp;   PosN接近正场外特征-公园，绿地等</br>
+                     PosA	Adjacent to postive off-site feature&nbsp;&nbsp;&nbsp;&nbsp;   。PosA邻近正场外特征</br>
+                     RRNe	Within 200' of East-West Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RRNe在东西铁路200'之内</br>
+                     RRAe	Adjacent to East-West Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RRAe邻接东西铁路</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Condition2: Proximity to various conditions (if more than one is present)&nbsp;&nbsp;&nbsp;&nbsp;   条件2：接近各种条件（如果超过一个）存在）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Artery	Adjacent to arterial street&nbsp;&nbsp;&nbsp;&nbsp;   动脉毗邻动脉街道</br>
+                     Feedr	Adjacent to feeder street	&nbsp;&nbsp;&nbsp;&nbsp;   支线邻近支线街道</br>
+                     Norm	Normal	&nbsp;&nbsp;&nbsp;&nbsp;   规范</br>
+                     RRNn	Within 200' of North-South Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RRNn在南北铁路</br>
+                     RRAn	Adjacent to North-South Railroad&nbsp;&nbsp;&nbsp;&nbsp;   RR 200'以内北北铁路</br>
+                     PosN	Near positive off-site feature--park, greenbelt, etc.&nbsp;&nbsp;&nbsp;&nbsp;   PosN接近正场外特征-公园，绿化带等</br>
+                     PosA	Adjacent to postive off-site feature&nbsp;&nbsp;&nbsp;&nbsp;   。PosA邻近正轨场外功能</br>
+                     RRNe	Within 200' of East-West Railroad&nbsp;&nbsp;&nbsp;&nbsp;   东西方铁路200范围内的RRNe东西方铁路</br>
+                     RRAe	Adjacent to East-West Railroad&nbsp;&nbsp;&nbsp;&nbsp;   大楼附近</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BldgType: Type of dwelling&nbsp;&nbsp;&nbsp;&nbsp;   类型：住宅类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     1Fam	Single-family Detached	&nbsp;&nbsp;&nbsp;&nbsp;   1Fam单户独立式</br>
+                     2FmCon	Two-family Conversion; originally built as one-family dwelling&nbsp;&nbsp;&nbsp;&nbsp;   2FmCon两户转换；最初是作为一户住宅建造的</br>
+                     Duplx	Duplex&nbsp;&nbsp;&nbsp;&nbsp;   Duplx Duplex</br>
+                     TwnhsE	Townhouse End Unit&nbsp;&nbsp;&nbsp;&nbsp;   TwnhsE Townhouse末端单元</br>
+                     TwnhsI	Townhouse Inside Unit&nbsp;&nbsp;&nbsp;&nbsp;   TwnhsI Townhouse内部单元</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              HouseStyle: Style of dwelling&nbsp;&nbsp;&nbsp;&nbsp;   房风格：住宅</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     1Story	One story&nbsp;&nbsp;&nbsp;&nbsp;   风格1层</br>
+                     1.5Fin	One and one-half story: 2nd level finished&nbsp;&nbsp;&nbsp;&nbsp;   楼高1.5层楼高1层楼高一半楼高：2层</br>
+                     1.5Unf	One and one-half story: 2nd level unfinished&nbsp;&nbsp;&nbsp;&nbsp;   楼高1.5层楼低1层楼高一半楼高：2层楼房未完成2层</br>
+                     2Story	Two story&nbsp;&nbsp;&nbsp;&nbsp;   楼高两层楼</br>
+                     2.5Fin	Two and one-half story: 2nd level finished&nbsp;&nbsp;&nbsp;&nbsp;   2.5Fin两层半楼：2级完成</br>
+                     2.5Unf	Two and one-half story: 2nd level unfinished&nbsp;&nbsp;&nbsp;&nbsp;   2.5Unf两个半故事：2级未完成</br>
+                     SFoyer	Split Foyer&nbsp;&nbsp;&nbsp;&nbsp;   SFoyer Split门厅</br>
+                     SLvl	Split Level&nbsp;&nbsp;&nbsp;&nbsp;   SLvl Split Level</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              OverallQual: Rates the overall material and finish of the house&nbsp;&nbsp;&nbsp;&nbsp;   整体质量：对房屋的整体材料和装修进行评分</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     10	Very Excellent&nbsp;&nbsp;&nbsp;&nbsp;   10 非常好</br>
+                     9	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   9</br>
+                     8	Very Good&nbsp;&nbsp;&nbsp;&nbsp;   非常好9 非常8好</br>
+                     7	Good&nbsp;&nbsp;&nbsp;&nbsp;   7好</br>
+                     6	Above Average&nbsp;&nbsp;&nbsp;&nbsp;   6高于平均水平</br>
+                     5	Average&nbsp;&nbsp;&nbsp;&nbsp;   5平均</br>
+                     4	Below Average&nbsp;&nbsp;&nbsp;&nbsp;   4低于平均水平</br>
+                     3	Fair&nbsp;&nbsp;&nbsp;&nbsp;   3 一般</br>
+                     2	Poor&nbsp;&nbsp;&nbsp;&nbsp;   2较差</br>
+                     1	Very Poor&nbsp;&nbsp;&nbsp;&nbsp;   1非常差</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              OverallCond: Rates the overall condition of the house&nbsp;&nbsp;&nbsp;&nbsp;   TotalCond：评估房屋的总体状况</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     10	Very Excellent&nbsp;&nbsp;&nbsp;&nbsp;   10 非常好</br>
+                     9	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   9</br>
+                     8	Very Good&nbsp;&nbsp;&nbsp;&nbsp;   很好8很好</br>
+                     7	Good&nbsp;&nbsp;&nbsp;&nbsp;   7好</br>
+                     6	Above Average	&nbsp;&nbsp;&nbsp;&nbsp;   6高于平均值</br>
+                     5	Average&nbsp;&nbsp;&nbsp;&nbsp;   5平均值</br>
+                     4	Below Average	&nbsp;&nbsp;&nbsp;&nbsp;   4低于平均值</br>
+                     3	Fair&nbsp;&nbsp;&nbsp;&nbsp;   3 一般</br>
+                     2	Poor&nbsp;&nbsp;&nbsp;&nbsp;   2较差</br>
+                     1	Very Poor&nbsp;&nbsp;&nbsp;&nbsp;   1非常较差的</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              YearBuilt: Original construction date&nbsp;&nbsp;&nbsp;&nbsp;   年份内置：原始施工日期</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              YearRemodAdd: Remodel date (same as construction date if no remodeling or additions)&nbsp;&nbsp;&nbsp;&nbsp;   YearRemodAdd：改建日期（如果没有改建或增加，则与施工日期相同）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              RoofStyle: Type of roof&nbsp;&nbsp;&nbsp;&nbsp;   RoofStyle：屋顶的类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Flat	Flat&nbsp;&nbsp;&nbsp;&nbsp;   Flat Flat</br>
+                     Gable	Gable&nbsp;&nbsp;&nbsp;&nbsp;   Gable Gable</br>
+                     Gambrel	Gabrel (Barn)&nbsp;&nbsp;&nbsp;&nbsp;   Gambrel Gabrel（Barn ）</br>
+                     Hip	Hip&nbsp;&nbsp;&nbsp;&nbsp;   髋关节髋关节</br>
+                     Mansard	Mansard&nbsp;&nbsp;&nbsp;&nbsp;   Mansard Mansard</br>
+                     Shed	Shed&nbsp;&nbsp;&nbsp;&nbsp;   Shed Shed</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              RoofMatl: Roof material&nbsp;&nbsp;&nbsp;&nbsp;   RoofMatl：屋顶材料</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     ClyTile	Clay or Tile&nbsp;&nbsp;&nbsp;&nbsp;   ClyTile粘土或瓷砖</br>
+                     CompShg	Standard (Composite) Shingle&nbsp;&nbsp;&nbsp;&nbsp;   CompShg标准（复合）瓦</br>
+                     Membran	Membrane&nbsp;&nbsp;&nbsp;&nbsp;   膜膜</br>
+                     Metal	Metal&nbsp;&nbsp;&nbsp;&nbsp;   金属金属</br>
+                     Roll	Roll&nbsp;&nbsp;&nbsp;&nbsp;   辊</br>
+                     Tar&Grv	Gravel & Tar&nbsp;&nbsp;&nbsp;&nbsp;   焦油和碎石碎石和焦油</br>
+                     WdShake	Wood Shakes&nbsp;&nbsp;&nbsp;&nbsp;   WdShake木材震动</br>
+                     WdShngl	Wood Shingles&nbsp;&nbsp;&nbsp;&nbsp;   WdShngl木瓦</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Exterior1st: Exterior covering on house&nbsp;&nbsp;&nbsp;&nbsp;   外墙1：房屋</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     AsbShng	Asbestos Shingles&nbsp;&nbsp;&nbsp;&nbsp;   外墙饰面AsbShng石棉瓦</br>
+                     AsphShn	Asphalt Shingles&nbsp;&nbsp;&nbsp;&nbsp;   AsphShn沥青瓦</br>
+                     BrkComm	Brick Common&nbsp;&nbsp;&nbsp;&nbsp;   BrkComm砖Common</br>
+                     BrkFace	Brick Face&nbsp;&nbsp;&nbsp;&nbsp;   BrkFace</br>
+                     CBlock	Cinder Block&nbsp;&nbsp;&nbsp;&nbsp;   砖面</br>
+                     CemntBd	Cement Board&nbsp;&nbsp;&nbsp;&nbsp;   CBlock</br>
+                     HdBoard	Hard Board&nbsp;&nbsp;&nbsp;&nbsp;   CinderBoard</br>
+                     ImStucc	Imitation Stucco&nbsp;&nbsp;&nbsp;&nbsp;   CemntBtu仿灰泥</br>
+                     MetalSd	Metal Siding&nbsp;&nbsp;&nbsp;&nbsp;   MetalSd金属壁板</br>
+                     Other	Other&nbsp;&nbsp;&nbsp;&nbsp;   其他其他</br>
+                     Plywood	Plywood&nbsp;&nbsp;&nbsp;&nbsp;   胶合板胶合板</br>
+                     PreCast	PreCast	&nbsp;&nbsp;&nbsp;&nbsp;   PreCast PreCast</br>
+                     Stone	Stone&nbsp;&nbsp;&nbsp;&nbsp;   石材石材</br>
+                     Stucco	Stucco&nbsp;&nbsp;&nbsp;&nbsp;   灰泥灰泥</br>
+                     VinylSd	Vinyl Siding&nbsp;&nbsp;&nbsp;&nbsp;   乙烯基Sd乙烯基墙板</br>
+                     Wd Sdng	Wood Siding&nbsp;&nbsp;&nbsp;&nbsp;   Wd Sdng木墙板</br>
+                     WdShing	Wood Shingles&nbsp;&nbsp;&nbsp;&nbsp;   WdShing木瓦</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Exterior2nd: Exterior covering on house (if more than one material)&nbsp;&nbsp;&nbsp;&nbsp;   外墙第二层：房屋外墙覆盖层（如果使用一种以上的材料）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     AsbShng	Asbestos Shingles&nbsp;&nbsp;&nbsp;&nbsp;   AsbShng石棉木瓦</br>
+                     AsphShn	Asphalt Shingles&nbsp;&nbsp;&nbsp;&nbsp;   AsphShn沥青木瓦</br>
+                     BrkComm	Brick Common&nbsp;&nbsp;&nbsp;&nbsp;   BrkComm砖普通</br>
+                     BrkFace	Brick Face&nbsp;&nbsp;&nbsp;&nbsp;   BrkFace</br>
+                     CBlock	Cinder Block&nbsp;&nbsp;&nbsp;&nbsp;   砖面CB块</br>
+                     CemntBd	Cement Board&nbsp;&nbsp;&nbsp;&nbsp;   CB板</br>
+                     HdBoard	Hard Board&nbsp;&nbsp;&nbsp;&nbsp;   HdBoard硬板</br>
+                     ImStucc	Imitation Stucco&nbsp;&nbsp;&nbsp;&nbsp;   ImStucc仿粉刷</br>
+                     MetalSd	Metal Siding&nbsp;&nbsp;&nbsp;&nbsp;   MetalSd金属屋面</br>
+                     Other	Other&nbsp;&nbsp;&nbsp;&nbsp;   其他其他</br>
+                     Plywood	Plywood&nbsp;&nbsp;&nbsp;&nbsp;   胶合板</br>
+                     PreCast	PreCast&nbsp;&nbsp;&nbsp;&nbsp;   预制预制</br>
+                     Stone	Stone&nbsp;&nbsp;&nbsp;&nbsp;   石材</br>
+                     Stucco	Stucco&nbsp;&nbsp;&nbsp;&nbsp;   粉刷粉刷</br>
+                     VinylSd	Vinyl Siding&nbsp;&nbsp;&nbsp;&nbsp;   VinylSd乙烯基壁板</br>
+                     Wd Sdng	Wood Siding&nbsp;&nbsp;&nbsp;&nbsp;   WD Sdng木壁板</br>
+                     WdShing	Wood Shingles&nbsp;&nbsp;&nbsp;&nbsp;   WdShing木瓦</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MasVnrType: Masonry veneer type&nbsp;&nbsp;&nbsp;&nbsp;   MasVnrType：砌体单板类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     BrkCmn	Brick Common&nbsp;&nbsp;&nbsp;&nbsp;   BrkCmn砖常见</br>
+                     BrkFace	Brick Face&nbsp;&nbsp;&nbsp;&nbsp;   BrkFace砖面对</br>
+                     CBlock	Cinder Block&nbsp;&nbsp;&nbsp;&nbsp;   CBLOCK煤渣砌块</br>
+                     None	None&nbsp;&nbsp;&nbsp;&nbsp;   无无</br>
+                     Stone	Stone&nbsp;&nbsp;&nbsp;&nbsp;   石石</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MasVnrArea: Masonry veneer area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   平方英尺砌体单板面积：MasVnrArea</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              ExterQual: Evaluates the quality of the material on the exterior &nbsp;&nbsp;&nbsp;&nbsp;   ExterQual ：评估</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex Ex 外部材料的质量</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Average/Typical&nbsp;&nbsp;&nbsp;&nbsp;   TA平均/典型</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   Fa</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   较差</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              ExterCond: Evaluates the present condition of the material on the exterior&nbsp;&nbsp;&nbsp;&nbsp;   ExerCond：评估外部材料的现状</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex优异</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Average/Typical&nbsp;&nbsp;&nbsp;&nbsp;   TA平均/典型</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   Fa</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   较差</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Foundation: Type of foundation&nbsp;&nbsp;&nbsp;&nbsp;   基金会基础：基础类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     BrkTil	Brick & Tile&nbsp;&nbsp;&nbsp;&nbsp;   BrkTil砖和砖</br>
+                     CBlock	Cinder Block&nbsp;&nbsp;&nbsp;&nbsp;   CBlock煤渣块</br>
+                     PConc	Poured Contrete	&nbsp;&nbsp;&nbsp;&nbsp;   PConc浇筑的混凝土</br>
+                     Slab	Slab&nbsp;&nbsp;&nbsp;&nbsp;   板平板</br>
+                     Stone	Stone&nbsp;&nbsp;&nbsp;&nbsp;   石材石材</br>
+                     Wood	Wood&nbsp;&nbsp;&nbsp;&nbsp;   木材木材</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtQual: Evaluates the height of the basement&nbsp;&nbsp;&nbsp;&nbsp;   BsmtQual：评估地下室的高度</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent (100+ inches)	&nbsp;&nbsp;&nbsp;&nbsp;   防爆优秀（100 +英寸）</br>
+                     Gd	Good (90-99 inches)&nbsp;&nbsp;&nbsp;&nbsp;   钆良好（90-99英寸）</br>
+                     TA	Typical (80-89 inches)&nbsp;&nbsp;&nbsp;&nbsp;   TA典型（80-89英寸）的</br>
+                     Fa	Fair (70-79 inches)&nbsp;&nbsp;&nbsp;&nbsp;   发展（70-79英寸）</br>
+                     Po	Poor (<70 inches&nbsp;&nbsp;&nbsp;&nbsp;   宝差（<70英寸</br>
+                     NA	No Basement&nbsp;&nbsp;&nbsp;&nbsp;   NA无地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtCond: Evaluates the general condition of the basement&nbsp;&nbsp;&nbsp;&nbsp;   BsmtCond：评估地下室的一般状况</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   防爆优良</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Typical - slight dampness allowed&nbsp;&nbsp;&nbsp;&nbsp;   TA典型-允许略微潮湿一般</br>
+                     Fa	Fair - dampness or some cracking or settling&nbsp;&nbsp;&nbsp;&nbsp;   -潮湿或有一些开裂或沉淀</br>
+                     Po	Poor - Severe cracking, settling, or wetness&nbsp;&nbsp;&nbsp;&nbsp;   Po差-严重开裂，沉淀或湿润</br>
+                     NA	No Basement&nbsp;&nbsp;&nbsp;&nbsp;   NA无地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtExposure: Refers to walkout or garden level walls&nbsp;&nbsp;&nbsp;&nbsp;   BsmtExposure：指罢工或花园水平的墙壁</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Gd	Good Exposure&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好暴露</br>
+                     Av	Average Exposure (split levels or foyers typically score average or above)	&nbsp;&nbsp;&nbsp;&nbsp;   平均平均暴露（分裂水平或门槛通常得分</br>
+                     Mn	Mimimum Exposure&nbsp;&nbsp;&nbsp;&nbsp;   均等或以上） Mn最低暴露</br>
+                     No	No Exposure&nbsp;&nbsp;&nbsp;&nbsp;   否否暴露</br>
+                     NA	No Basement&nbsp;&nbsp;&nbsp;&nbsp;   不否地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtFinType1: Rating of basement finished area&nbsp;&nbsp;&nbsp;&nbsp;   BsmtFinType1：地下室完成区域</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     GLQ	Good Living Quarters&nbsp;&nbsp;&nbsp;&nbsp;   等级GLQ良好居住区</br>
+                     ALQ	Average Living Quarters&nbsp;&nbsp;&nbsp;&nbsp;   ALQ平均居住区</br>
+                     BLQ	Below Average Living Quarters	&nbsp;&nbsp;&nbsp;&nbsp;   BLQ低于平均居住区</br>
+                     Rec	Average Rec Room&nbsp;&nbsp;&nbsp;&nbsp;   Rec平均记录房</br>
+                     LwQ	Low Quality&nbsp;&nbsp;&nbsp;&nbsp;   LwQ低质量</br>
+                     Unf	Unfinshed&nbsp;&nbsp;&nbsp;&nbsp;   Unf未完成不</br>
+                     NA	No Basement&nbsp;&nbsp;&nbsp;&nbsp;   适用否地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtFinSF1: Type 1 finished square feet&nbsp;&nbsp;&nbsp;&nbsp;   BsmtFinSF1：类型1完成的平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtFinType2: Rating of basement finished area (if multiple types)&nbsp;&nbsp;&nbsp;&nbsp;   BsmtFinType2：地下室完成区域的等级（如果有多种类型）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     GLQ	Good Living Quarters&nbsp;&nbsp;&nbsp;&nbsp;   GLQ良好居住区</br>
+                     ALQ	Average Living Quarters&nbsp;&nbsp;&nbsp;&nbsp;   ALQ平均居住区</br>
+                     BLQ	Below Average Living Quarters	&nbsp;&nbsp;&nbsp;&nbsp;   BLQ低于平均居住区</br>
+                     Rec	Average Rec Room&nbsp;&nbsp;&nbsp;&nbsp;   Rec平均</br>
+                     LwQ	Low Quality&nbsp;&nbsp;&nbsp;&nbsp;   娱乐室LwQ低质量</br>
+                     Unf	Unfinshed&nbsp;&nbsp;&nbsp;&nbsp;   未完成</br>
+                     NA	No Basement&nbsp;&nbsp;&nbsp;&nbsp;   NA没有地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtFinSF2: Type 2 finished square feet&nbsp;&nbsp;&nbsp;&nbsp;   BsmtFinSF2：类型2成品平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtUnfSF: Unfinished square feet of basement area&nbsp;&nbsp;&nbsp;&nbsp;   BsmtUnfSF：未完成的地下室平方英尺TotalBsmtSF：地下室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              TotalBsmtSF: Total square feet of basement area&nbsp;&nbsp;&nbsp;&nbsp;   总平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Heating: Type of heating&nbsp;&nbsp;&nbsp;&nbsp;   加热：加热</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Floor	Floor Furnace&nbsp;&nbsp;&nbsp;&nbsp;   地板的类型地板炉</br>
+                     GasA	Gas forced warm air furnace&nbsp;&nbsp;&nbsp;&nbsp;   GasA燃气强制热风炉</br>
+                     GasW	Gas hot water or steam heat&nbsp;&nbsp;&nbsp;&nbsp;   GasW燃气热水或蒸汽热 Grav</br>
+                     Grav	Gravity furnace	&nbsp;&nbsp;&nbsp;&nbsp;   重力炉</br>
+                     OthW	Hot water or steam heat other than gas&nbsp;&nbsp;&nbsp;&nbsp;   OthW燃气以外的热水或蒸汽热</br>
+                     Wall	Wall furnace&nbsp;&nbsp;&nbsp;&nbsp;   壁装式壁式炉加热</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              HeatingQC: Heating quality and condition&nbsp;&nbsp;&nbsp;&nbsp;   QC：加热质量和条件</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex优异</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Average/Typical&nbsp;&nbsp;&nbsp;&nbsp;   TA平均/典型</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   Fa Fair</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   Po差</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              CentralAir: Central air conditioning&nbsp;&nbsp;&nbsp;&nbsp;   中央空气：中央空调</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     N	No&nbsp;&nbsp;&nbsp;&nbsp;   N否</br>
+                     Y	Yes&nbsp;&nbsp;&nbsp;&nbsp;   是是</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Electrical: Electrical system&nbsp;&nbsp;&nbsp;&nbsp;   电气：电气系统</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     SBrkr	Standard Circuit Breakers & Romex&nbsp;&nbsp;&nbsp;&nbsp;   SBrkr标准断路器和Romex</br>
+                     FuseA	Fuse Box over 60 AMP and all Romex wiring (Average)	&nbsp;&nbsp;&nbsp;&nbsp;   FuseA保险丝盒超过60 AMP，所有Romex布线（平均）</br>
+                     FuseF	60 AMP Fuse Box and mostly Romex wiring (Fair)&nbsp;&nbsp;&nbsp;&nbsp;   FuseF 60 AMP保险丝盒，主要是Romex接线（一般）</br>
+                     FuseP	60 AMP Fuse Box and mostly knob & tube wiring (poor)&nbsp;&nbsp;&nbsp;&nbsp;   FuseP 60 AMP保险丝盒，主要是旋钮和管子的接线（差）</br>
+                     Mix	Mixed&nbsp;&nbsp;&nbsp;&nbsp;   混合混合</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              1stFlrSF: First Floor square feet&nbsp;&nbsp;&nbsp;&nbsp;   1stFlrSF：一楼平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              2ndFlrSF: Second floor square feet&nbsp;&nbsp;&nbsp;&nbsp;   2ndFlrSF：二楼平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              LowQualFinSF: Low quality finished square feet (all floors)&nbsp;&nbsp;&nbsp;&nbsp;   LowQualFinSF：低质量成品平方英尺（所有楼层）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GrLivArea: Above grade (ground) living area square feet&nbsp;&nbsp;&nbsp;&nbsp;   GrLivArea：地面（地面）起居区平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtFullBath: Basement full bathrooms&nbsp;&nbsp;&nbsp;&nbsp;   BsmtFullBath：地下室完整浴室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              BsmtHalfBath: Basement half bathrooms&nbsp;&nbsp;&nbsp;&nbsp;   BsmtHalfBath：地下室半浴室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              FullBath: Full bathrooms above grade&nbsp;&nbsp;&nbsp;&nbsp;   FullBath：整个等级浴室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              HalfBath: Half baths above grade&nbsp;&nbsp;&nbsp;&nbsp;   HalfBath：年级以上的半浴室</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Bedroom: Bedrooms above grade (does NOT include basement bedrooms)&nbsp;&nbsp;&nbsp;&nbsp;   卧室：年级以上的卧室（不包括地下室卧室）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Kitchen: Kitchens above grade&nbsp;&nbsp;&nbsp;&nbsp;   厨房：年级</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              KitchenQual: Kitchen quality&nbsp;&nbsp;&nbsp;&nbsp;   以上的厨房KitchenQual：厨房质量</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex优秀</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Typical/Average&nbsp;&nbsp;&nbsp;&nbsp;   TA典型/平均</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   博览会</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   差</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              TotRmsAbvGrd: Total rooms above grade (does not include bathrooms)&nbsp;&nbsp;&nbsp;&nbsp;   TotRmsAbvGrd：上层客房总数（不包括浴室）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Functional: Home functionality (Assume typical unless deductions are warranted)&nbsp;&nbsp;&nbsp;&nbsp;   功能：家庭功能（假定为典型值，除非需要扣除费用）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Typ	Typical Functionality&nbsp;&nbsp;&nbsp;&nbsp;   典型功能性</br>
+                     Min1	Minor Deductions 1&nbsp;&nbsp;&nbsp;&nbsp;   Min1次要扣除1</br>
+                     Min2	Minor Deductions 2&nbsp;&nbsp;&nbsp;&nbsp;   Min2次要扣除2</br>
+                     Mod	Moderate Deductions&nbsp;&nbsp;&nbsp;&nbsp;   Mod中度扣除</br>
+                     Maj1	Major Deductions 1&nbsp;&nbsp;&nbsp;&nbsp;   Maj1主要扣除1</br>
+                     Maj2	Major Deductions 2&nbsp;&nbsp;&nbsp;&nbsp;   Maj2主要扣除2</br>
+                     Sev	Severely Damaged&nbsp;&nbsp;&nbsp;&nbsp;   严重损坏的</br>
+                     Sal	Salvage only&nbsp;&nbsp;&nbsp;&nbsp;   萨尔打捞仅</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Fireplaces: Number of fireplaces&nbsp;&nbsp;&nbsp;&nbsp;   壁炉：壁炉数量</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              FireplaceQu: Fireplace quality&nbsp;&nbsp;&nbsp;&nbsp;   FireplaceQu：壁炉优质</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent - Exceptional Masonry Fireplace&nbsp;&nbsp;&nbsp;&nbsp;   防爆优秀-卓越砌体壁炉</br>
+                     Gd	Good - Masonry Fireplace in main level&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好-主建筑中的砖石壁炉</br>
+                     TA	Average - Prefabricated Fireplace in main living area or Masonry Fireplace in basement&nbsp;&nbsp;&nbsp;&nbsp;   TA平均-主要起居区中的预制壁炉或地下室中的砖石壁炉</br>
+                     Fa	Fair - Prefabricated Fireplace in basement&nbsp;&nbsp;&nbsp;&nbsp;   Fa Fair- 地下室中的预制壁炉</br>
+                     Po	Poor - Ben Franklin Stove&nbsp;&nbsp;&nbsp;&nbsp;   Po Poor- 本·富兰克林炉膛</br>
+                     NA	No Fireplace&nbsp;&nbsp;&nbsp;&nbsp;   NA无壁炉</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageType: Garage location&nbsp;&nbsp;&nbsp;&nbsp;   车库</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     2Types	More than one type of garage&nbsp;&nbsp;&nbsp;&nbsp;   类型：车库位置2类型多于一种的车库</br>
+                     Attchd	Attached to home&nbsp;&nbsp;&nbsp;&nbsp;   Attchd附属于家庭</br>
+                     Basment	Basement Garage&nbsp;&nbsp;&nbsp;&nbsp;   地下室地下车库</br>
+                     BuiltIn	Built-In (Garage part of house - typically has room above garage)&nbsp;&nbsp;&nbsp;&nbsp;   内置内置（房屋的车库部分-通常在车库上方有空间）</br>
+                     CarPort	Car Port&nbsp;&nbsp;&nbsp;&nbsp;   CarPort车口被</br>
+                     Detchd	Detached from home&nbsp;&nbsp;&nbsp;&nbsp;   拉出从家中分离</br>
+                     NA	No Garage&nbsp;&nbsp;&nbsp;&nbsp;   无车库</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageYrBlt: Year garage was built&nbsp;&nbsp;&nbsp;&nbsp;   GarageYrBlt：建造年份的车库GarageFinish：车库的</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageFinish: Interior finish of the garage&nbsp;&nbsp;&nbsp;&nbsp;   内部饰面</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Fin	Finished&nbsp;&nbsp;&nbsp;&nbsp;   Fin完成</br>
+                     RFn	Rough Finished	&nbsp;&nbsp;&nbsp;&nbsp;   RFn粗糙完成</br>
+                     Unf	Unfinished&nbsp;&nbsp;&nbsp;&nbsp;   Unf未完成</br>
+                     NA	No Garage&nbsp;&nbsp;&nbsp;&nbsp;   NA无Garage</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageCars: Size of garage in car capacity&nbsp;&nbsp;&nbsp;&nbsp;   GarageCars：车库容量中</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageArea: Size of garage in square feet&nbsp;&nbsp;&nbsp;&nbsp;   的车库大小</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageQual: Garage quality&nbsp;&nbsp;&nbsp;&nbsp;   GarageArea：平方英尺中的车库大小GarageQual：车库质量</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex卓越</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Typical/Average&nbsp;&nbsp;&nbsp;&nbsp;   TA典型/平均</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   Fa Fair</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   Po差</br>
+                     NA	No Garage&nbsp;&nbsp;&nbsp;&nbsp;   NA无车库</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              GarageCond: Garage condition&nbsp;&nbsp;&nbsp;&nbsp;   GardCond：车库状况</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex优良</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd良好</br>
+                     TA	Typical/Average&nbsp;&nbsp;&nbsp;&nbsp;   TA典型/平均</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   发展</br>
+                     Po	Poor&nbsp;&nbsp;&nbsp;&nbsp;   宝差</br>
+                     NA	No Garage&nbsp;&nbsp;&nbsp;&nbsp;   不适用否车库</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              PavedDrive: Paved driveway&nbsp;&nbsp;&nbsp;&nbsp;   PavedDrive：铺装车道</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Y	Paved &nbsp;&nbsp;&nbsp;&nbsp;   Ÿ铺装</br>
+                     P	Partial Pavement&nbsp;&nbsp;&nbsp;&nbsp;   p个部分路面</br>
+                     N	Dirt/Gravel&nbsp;&nbsp;&nbsp;&nbsp;   ñ脏物/碎石</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              WoodDeckSF: Wood deck area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   WoodDeckSF：平方英尺木甲板面积</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              OpenPorchSF: Open porch area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   OpenPorchSF：平方英尺打开门廊区域</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              EnclosedPorch: Enclosed porch area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   EnclosedPorch：封闭阳台面积平方英尺</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              3SsnPorch: Three season porch area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   3SsnPorch：三个季节的门廊面积（平方英尺）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              ScreenPorch: Screen porch area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   ScreenPorch：屏幕的门廊面积（平方英尺）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              PoolArea: Pool area in square feet&nbsp;&nbsp;&nbsp;&nbsp;   PoolArea：游泳池面积（平方英尺）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              PoolQC: Pool quality&nbsp;&nbsp;&nbsp;&nbsp;   PoolQC：泳池质量</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Ex	Excellent&nbsp;&nbsp;&nbsp;&nbsp;   Ex优</br>
+                     Gd	Good&nbsp;&nbsp;&nbsp;&nbsp;   Gd好</br>
+                     TA	Average/Typical&nbsp;&nbsp;&nbsp;&nbsp;   TA一般/典型</br>
+                     Fa	Fair&nbsp;&nbsp;&nbsp;&nbsp;   Fa Fair不</br>
+                     NA	No Pool&nbsp;&nbsp;&nbsp;&nbsp;   适用否</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              Fence: Fence quality&nbsp;&nbsp;&nbsp;&nbsp;   围栏：围栏质量</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     GdPrv	Good Privacy&nbsp;&nbsp;&nbsp;&nbsp;   GdPrv良好的私密性</br>
+                     MnPrv	Minimum Privacy&nbsp;&nbsp;&nbsp;&nbsp;   MnPrv最小的私密性</br>
+                     GdWo	Good Wood&nbsp;&nbsp;&nbsp;&nbsp;   GdWo良好的木材</br>
+                     MnWw	Minimum Wood/Wire&nbsp;&nbsp;&nbsp;&nbsp;   MnWw最小的木材/电线</br>
+                     NA	No Fence&nbsp;&nbsp;&nbsp;&nbsp;   NA否围栏</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MiscFeature: Miscellaneous feature not covered in other categories&nbsp;&nbsp;&nbsp;&nbsp;   杂项功能：其他类别未涵盖的杂项功能</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Elev	Elevator&nbsp;&nbsp;&nbsp;&nbsp;   电梯</br>
+                     Gar2	2nd Garage (if not described in garage section)&nbsp;&nbsp;&nbsp;&nbsp;   Gar2第二车库（如果未在车库中描述）部分）</br>
+                     Othr	Other&nbsp;&nbsp;&nbsp;&nbsp;   Othr其他 棚架</br>
+                     Shed	Shed (over 100 SF)&nbsp;&nbsp;&nbsp;&nbsp;   （超过100平方英尺）</br>
+                     TenC	Tennis Court&nbsp;&nbsp;&nbsp;&nbsp;   TenC网球场</br>
+                     NA	None&nbsp;&nbsp;&nbsp;&nbsp;   NA无</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MiscVal: $Value of miscellaneous feature&nbsp;&nbsp;&nbsp;&nbsp;   其他：其他功能的价值</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              MoSold: Month Sold (MM)&nbsp;&nbsp;&nbsp;&nbsp;   MoSold：月售出（MM）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              YrSold: Year Sold (YYYY)&nbsp;&nbsp;&nbsp;&nbsp;   YrSold：年售（YYYY）</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              SaleType: Type of sale&nbsp;&nbsp;&nbsp;&nbsp;   销售类型：销售类型</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     WD 	Warranty Deed - Conventional&nbsp;&nbsp;&nbsp;&nbsp;   WD保修契据-常规</br>
+                     CWD	Warranty Deed - Cash&nbsp;&nbsp;&nbsp;&nbsp;   CWD保修契据-现金</br>
+                     VWD	Warranty Deed - VA Loan&nbsp;&nbsp;&nbsp;&nbsp;   VWD保修契据-VA 贷款</br>
+                     New	Home just constructed and sold&nbsp;&nbsp;&nbsp;&nbsp;   刚建造并出售的</br>
+                     COD	Court Officer Deed/Estate&nbsp;&nbsp;&nbsp;&nbsp;   COD法院干事契据/房地产</br>
+                     Con	Contract 15% Down payment regular terms&nbsp;&nbsp;&nbsp;&nbsp;   合同15预付款百分比常规条款</br>
+                     ConLw	Contract Low Down payment and low interest&nbsp;&nbsp;&nbsp;&nbsp;   ConLw合同低首付款和低利息</br>
+                     ConLI	Contract Low Interest&nbsp;&nbsp;&nbsp;&nbsp;   ConLI合同低利息</br>
+                     ConLD	Contract Low Down&nbsp;&nbsp;&nbsp;&nbsp;   ConLD合同 低首价</br>
+                     Oth	Other&nbsp;&nbsp;&nbsp;&nbsp;   其他</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+              SaleCondition: Condition of sale&nbsp;&nbsp;&nbsp;&nbsp;   销售条件：销售条件</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;   </br>
+                     Normal	Normal Sale&nbsp;&nbsp;&nbsp;&nbsp;   正常正常销售</br>
+                     Abnorml	Abnormal Sale -  trade, foreclosure, short sale&nbsp;&nbsp;&nbsp;&nbsp;   Abnorml异常出售-贸易，止赎，短期出售</br>
+                     AdjLand	Adjoining Land Purchase&nbsp;&nbsp;&nbsp;&nbsp;   AdjLand相邻土地购买</br>
+                     Alloca	Allocation - two linked properties with separate deeds, typically condo with a garage unit	&nbsp;&nbsp;&nbsp;&nbsp;   Alloca分配-具有独立契约的两个关联物业，通常与车库单元共管公寓</br>
+                     Family	Sale between family members&nbsp;&nbsp;&nbsp;&nbsp;   。家庭成员之间的家庭出售</br>
+                     Partial	Home was not completed when last assessed (associated with New Homes)&nbsp;&nbsp;&nbsp;&nbsp;   部分房屋在上次评估时未完成（与新房屋相关）</br>
+</body>
+</html>
